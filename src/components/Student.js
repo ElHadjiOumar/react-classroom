@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function Student(props) {
+export default function Student({learner,handleDelete}) {
     return (
         <div>
-            <li>{props.nom}</li>
+            <li>{learner.nom}    <button onClick={handleDelete.bind(this,learner.id)}>Delete</button></li>
+            {/* <button onClick={handleDelete.bind(this,learner.id)}>Delete</button> */}
         </div>
     )
 }
